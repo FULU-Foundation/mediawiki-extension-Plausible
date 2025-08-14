@@ -4,7 +4,9 @@
 			"Умар"
 		]
 	},
+	"ext-plausible-desc": "Интеграци йо Plausible Analytics, Google Analytics-на йиллина а, конфиденциаллалин альтернатива а.",
 	"ext-plausible-exclude-visits": "Со чуэхар йукъарадаккха",
+	"ext-plausible-include-visits": "Сан хьеший йукъара бахар сацаде",
 	"ext-plausible-notification-visits-excluded": "Хьан чуэхар хӀинца йукъарадоху",
 	"ext-plausible-notification-visits-included": "Хьан чуэхар хӀинца дӀахӀоттийна"
 }
