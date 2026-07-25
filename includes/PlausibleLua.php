@@ -22,14 +22,14 @@ declare( strict_types=1 );
 namespace MediaWiki\Extension\Plausible;
 
 use MediaWiki\Extension\PageViewInfo\CachedPageViewService;
+use MediaWiki\Extension\Scribunto\Engines\LuaCommon\LibraryBase;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use Scribunto_LuaLibraryBase;
 
 /**
  * phpcs:disable MediaWiki.Commenting.FunctionComment.ExtraParamComment
  */
-class PlausibleLua extends Scribunto_LuaLibraryBase {
+class PlausibleLua extends LibraryBase {
 
 	/**
 	 * @inheritDoc
