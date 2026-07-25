@@ -57,6 +57,8 @@ class PlausiblePageViewService implements PageViewService {
 			throw new InvalidArgumentException( 'Invalid days: ' . $days );
 		}
 
+		$titles = array_values( $titles );
+
 		$status = StatusValue::newGood();
 
 		$urls = [];
