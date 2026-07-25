@@ -25,17 +25,19 @@ class MediaWikiServices implements MediaWikiServicesHook {
 		$cache = ObjectCache::getLocalClusterInstance();
 		$logger = LoggerFactory::getInstance( 'Plausible' );
 		$cachedDays = max( 30, $wgPageViewApiMaxDays );
+		$titleFormatter = $services->getTitleFormatter();
 
 		$services->redefineService(
 			'PageViewService',
 			static function () use (
 				$cache,
 				$logger,
-				$cachedDays
+				$cachedDays,
+				$titleFormatter
 			) {
 				$service = new PlausiblePageViewService();
 
-				$cachedService = new CachedPageViewService( $service, $cache );
+				$cachedService = new CachedPageViewService( $service, $cache, $titleFormatter );
 				$cachedService->setCachedDays( $cachedDays );
 				$cachedService->setLogger( $logger );
 				return $cachedService;
